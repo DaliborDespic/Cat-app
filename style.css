@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./cat.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+img {
+  width: 100%;
+  max-width: 400px;
+  max-height: auto;
+  margin: 2rem auto;
+  box-shadow: 1px 2px 9px -1px #000000;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+.cat__name {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.cat__name a {
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: left;
+  margin: 0.5rem;
+}
+
+.cat__name a:hover {
+  color: rebeccapurple;
+}
+
+.cat__content {
+  position: fixed;
+  z-index: 1;
+  top: -120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  width: 800px;
+  height: 80vh;
+  overflow: auto;
+  padding: 1rem;
+  margin: 3rem auto;
+  text-align: center;
+  line-height: 1.3;
+  box-shadow: 1px 2px 9px -1px #000000;
+  transition: 0.5s ease;
+}
+
+.show {
+  top: 0;
+}
+
+.hamburger {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.5s ease;
+}
+
+.row {
+  display: flex;
+}
+
+.dot {
+  display: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #000;
+  margin: 3px;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.cat__content a {
+  color: #000;
+}
+
+.cat__content .close__content {
+  position: fixed;
+  left: 0.5rem;
+  top: 0;
+  color: #000;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.desctiption {
+  padding: 1rem 5rem;
+}
+
+@media (max-width: 768px) {
+  .cat__name {
+    flex-direction: column;
+    background-color: #fff;
+    width: 80%;
+    margin: 0 auto;
+    opacity: 0;
+    transition: 0.5s ease;
+  }
+
+  .show {
+    opacity: 1;
+  }
+
+  .dot {
+    display: block;
+  }
+
+  .cat__content {
+    max-width: 90%;
+  }
+
+  .desctiption {
+    padding: 1rem;
+  }
+}
